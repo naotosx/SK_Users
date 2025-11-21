@@ -86,7 +86,7 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "sap
                     codigo_internacional = 'FR'; // Francés
                     break;
                 case 'th':
-                    codigo_internacional = 'TH'; // Tailandés
+                    codigo_internacional = 'TH'; // Tailandés...
                     break;
                 default:
                     codigo_internacional = `EN`;
