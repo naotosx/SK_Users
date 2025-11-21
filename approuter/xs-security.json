@@ -1,0 +1,16 @@
+{
+  "xsappname": "skusers-app",
+  "tenant-mode": "dedicated",
+  "scopes": [
+    { "name": "$XSAPPNAME.display", "description": "Display" }
+  ],
+  "role-templates": [
+    {
+      "name": "Viewer",
+      "description": "Viewer Role",
+      "scope-references": [
+        "$XSAPPNAME.display"
+      ]
+    }
+  ]
+}
