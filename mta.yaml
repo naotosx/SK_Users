@@ -13,7 +13,7 @@ modules:
     build-result: resources
     requires:
     - artifacts:
-      - chgunlckusersskc.zip
+      - chgunlckusersskc-0.0.1.zip
       name: chgunlckusersskc
       target-path: resources/
 - name: chgunlckusersskc
