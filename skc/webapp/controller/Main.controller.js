@@ -64,7 +64,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "sap
                     sap.m.MessageToast.show("Error al enviar solicitud");
                 });
         },
-        obtenerCodigoIdiomaInternacional: function () {
+        getDestination: function (enviroment) {
+            let endpoint = '';
+            switch (enviroment) {
+                case 'DEV':
+                    endpoint = '/api/soapDEV';
+                        break;
+                case 'QAS':
+                    endpoint = '/api/soapQAS';
+                        break;
+                case 'PRD':
+                    endpoint = '/api/soapPRD';
+                        break;
+            }
+            return endpoint;
+        },
+         obtenerCodigoIdiomaInternacional: function () {
             // navigator.language devuelve el código principal, ej: "es-CL" o "en-US".
             const idiomaCompleto = navigator.language;
 
@@ -93,21 +108,22 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel", "sap
             }
 
             return codigo_internacional;
-        },
-        getDestination: function (enviroment) {
-            let endpoint = '';
-            switch (enviroment) {
-                case 'DEV':
-                    endpoint = '/api/soapDEV';
-                        break;
-                case 'QAS':
-                    endpoint = '/api/soapQAS';
-                        break;
-                case 'PRD':
-                    endpoint = '/api/soapPRD';
-                        break;
-            }
-            return endpoint;
         }
     });
 });
+
+/*jQuery.ajax({
+                url : '/XISOAPAdapter/MessageServlet',
+                type : "POST",
+                host : 'http://sk2wdp.sk.cl:8054',
+                data : sSoapEnvelope,
+                dataType : "text",
+                contentType: "text/xml; charset=utf-8",
+                success : function(data, textStatus, jqXHR) {
+                    debugger;
+                    console.log(data);
+                }.bind(this),
+                error : function(e) {
+                    console.log(e);
+                }.bind(this)
+            })*/

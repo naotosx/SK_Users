@@ -17,19 +17,19 @@
 
     {
       "source": "^/api/soapDEV$",
-      "target": "$1",
+      "target": "",
       "destination": "POD_Claves",
       "csrfProtection": false
     },
     {
       "source": "^/api/soapQAS$",
-      "target": "$1",
+      "target": "/XISOAPAdapter/MessageServlet?senderParty=&senderService=BS_SK_RCLAVES_Q&receiverParty=&receiverService=&interface=MI_mantenimiento_cliente_OS&interfaceNamespace=urn:skc.cl/mantenimiento_usuario_sap",
       "destination": "POQ_Claves",
       "csrfProtection": false
     },
     {
       "source": "^/api/soapPRD$",
-      "target": "$1",
+      "target": "",
       "destination": "POP_Claves",
       "csrfProtection": false
     },
