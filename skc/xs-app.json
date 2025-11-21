@@ -29,7 +29,7 @@
     },
     {
       "source": "^/api/soapPRD$",
-      "target": "",
+      "target": "$1",
       "destination": "POP_Claves",
       "csrfProtection": false
     },
