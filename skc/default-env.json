@@ -1,0 +1,18 @@
+{
+  "destinations": [
+    {
+      "name": "POD_Claves",
+      "url": "http://sk2wdp.sk.cl:8052/XISOAPAdapter",
+      "username": "INT_CLAVES_CORP",
+      "password": "corp2017pod",
+      "authentication": "BasicAuthentication"
+    },
+    {
+      "name": "POQ_Claves",
+      "url": "http://sk2wdp.sk.cl:8054/XISOAPAdapter",
+      "username": "INT_CLAVES_CORP",
+      "password": "corp2017poq300",
+      "authentication": "BasicAuthentication"
+    }
+  ]
+}
